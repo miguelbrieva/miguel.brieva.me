@@ -30,15 +30,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
   const { content, meta } = getPostFromSlug(slug);
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [
-        rehypeSlug as any,
-        [rehypeAutolinkHeadings, { behavior: "wrap" }],
-        rehypeHighlight,
-      ],
-    },
-  });
+  const mdxSource = await serialize(content);
 
   return { props: { post: { source: mdxSource, meta } } };
 };
