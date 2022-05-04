@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [
-        rehypeSlug,
+        rehypeSlug as any,
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
         rehypeHighlight,
       ],
