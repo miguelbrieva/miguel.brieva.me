@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 3rem;
+}
+
+.profilePic {
+  overflow: hidden;
+  border-radius: 100%;
+  width: 88px;
+  height: 88px;
+}
+
+.titleName {
+  color: var(--color-primary-400);
+  font-size: 2.6rem;
+}

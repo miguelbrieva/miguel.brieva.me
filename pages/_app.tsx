@@ -9,9 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>miguel.brieva.me</title>
       </Head>
-      <nav>
-        <Link href="/">miguel.brieva.me</Link>
-      </nav>
       <Component {...pageProps} />
     </div>
   );
