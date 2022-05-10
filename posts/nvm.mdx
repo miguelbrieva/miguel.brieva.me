@@ -1,0 +1,43 @@
+---
+title: Set a Node version with nvm
+tags:
+  - javascript
+  - nodejs
+  - nvm
+date: 2022-05-09
+excerpt: nvm is a version manager for node.js, it's allow us easelly install and use differents versions command line.
+---
+
+When we work with multiple projects, is very common to deal with vesioning problems. If you are working with nodejs, nvm is an excellent solution to quickly install and use different versions of Node via command line.
+
+You can install nvm via cURL or Wget by typing in your terminal one of the commands below.
+
+```console
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+```console
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+Then we can verify the installation.
+
+```console
+command -v nvm
+```
+
+## Usage
+
+To download, compile, and install a specific version of node:
+
+```console
+nvm install v14.14.0 # or v16.3.0
+```
+
+A usefull command is `use` that allow us set a default version.
+
+```console
+npm alias default node
+```
+
+We can check the documentation [here](https://github.com/nvm-sh/nvm).
