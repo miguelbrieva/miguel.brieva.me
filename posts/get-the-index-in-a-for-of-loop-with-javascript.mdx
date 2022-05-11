@@ -1,0 +1,39 @@
+---
+title: Get the index of a for...of loop in JavaScript 
+tags:
+  - algorithms
+  - big o
+  - data structures
+date: 2022-05-10
+excerpt: The for...of statement was introduced in ES6 and is used to iterate over an array in a 'clean' way.
+---
+
+The for...of statement was introduced in ES6 and is super usefull to iterate over an array in a 'clean' way.
+
+So, having array called `array` with `'a','b','c'` elements.
+
+```javascript
+for (let element of array) {
+  console.log(element)
+}
+// expected output:
+// "a"
+// "b"
+// "c"
+```
+
+But, what if I need the index.
+
+One solution is to use the `Array.prototype.entries()` method that returns a new array with a key/value pair with de index as key.
+
+```javascript
+for (let [index, element] of array.entries()) {
+  console.log(index, element)
+}
+// expected output:
+// 0, 'a'
+// 1, 'b'
+// 2, 'c'
+```
+
+If you know a easely solution, please let me know via [twitter](https://twitter.com/migBrv).
