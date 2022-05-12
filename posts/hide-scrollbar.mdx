@@ -1,0 +1,24 @@
+---
+title: How to hide the scrollbar using CSS
+tags:
+  - css 
+  - scrollbar
+date: 2022-05-11
+excerpt: This is a non-standard feature, so use it with moderation
+---
+
+This is a non-standard feature, so use it with moderation. `::-webkit-scrollbar` let us hide the scrollbar while scrolling is still working.
+
+```css
+// webkit- (Chrome, Safari, newer versions of Opera):
+.classname::-webkit-scrollbar { width: 0 !important }
+//-moz- (Firefox):
+.classname { overflow: -moz-scrollbars-none; }
+//-ms- (Internet Explorer +10):
+.classname { -ms-overflow-style: none; }
+```
+
+Find [here](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar) for the mozilla documentacion .
+
+
+Written with ❤️

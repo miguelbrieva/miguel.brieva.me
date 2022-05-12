@@ -1,0 +1,34 @@
+---
+title: Big O
+tags:
+  - algorithms
+  - big o
+  - data structures
+date: 2022-05-10
+excerpt: Big O notation is used to classify algorithms according to how their run time or space requirements grow as the input size grows.
+---
+
+Acording to [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Big O notation is used to classify algorithms according to how their run time or space requirements grow as the input size grows. It can help us to know if a solution is scalable.
+
+Run this code in a browser now the performance of this function.
+
+```js
+const wally = ['Wally']
+
+function whereIsWally(arr) {
+  let t0 = performance.now()
+  for (let i of arr) {
+    i === 'Wally' && console.log('There is Wally!')
+  }
+  let t1 = performance.now()
+  console.log(`The time it took to find him was ${t1 - t0} milliseconds`)
+}
+
+whereIsWally(wally)
+
+// There is Wally!
+// The time it took to find him was 0.10000000894069672 milliseconds
+```
+
+This was a very simple function iterating throw an array of just one element. But what if the array if bigger, for example, with 1k elements. Lets see.
+
