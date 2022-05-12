@@ -1,0 +1,33 @@
+---
+title: Set a default version of Node.js with nvm
+tags:
+  - javascript
+  - nodejs
+  - nvm
+date: 2022-05-09
+excerpt: nvm is a version manager for Node.js.
+---
+
+When we work with multiple projects, is very common to deal with vesioning problems. If you are working with nodejs, nvm is an excellent solution to quickly install and use different versions of Node.js via command line.
+
+We can know if nvm is installed with the command bellow. If you don't, find [here](https://github.com/nvm-sh/nvm) for instructions on how to do it.
+
+```console
+command -v nvm
+```
+
+## Usage
+
+To download, compile, and install a specific version of node:
+
+```console
+nvm install v14.14.0 # or v16.3.0
+```
+
+To set as default version:
+
+```console
+npm alias default v14.14.0
+```
+
+You can check the documentation [here](https://github.com/nvm-sh/nvm).
